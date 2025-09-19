@@ -2,73 +2,55 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <title>Site în dezvoltare</title>
+  <title>Clubul Sportiv Voinard - Site în mentenanță</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       text-align: center;
-      background: #f8f9fa;
+      background: #f4f6f9;
       color: #333;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     .container {
       max-width: 600px;
-      margin: 10% auto;
-      padding: 20px;
+      padding: 30px;
       background: white;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     h1 {
-      color: #e63946;
+      color: #004aad;
       font-size: 2rem;
       margin-bottom: 10px;
     }
     p {
       font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .logo {
       margin-bottom: 20px;
     }
-    .timer {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #1d3557;
+    .logo img {
+      max-width: 120px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🚧 Site în dezvoltare 🚧</h1>
-    <p>Lucrăm să aducem online o versiune nouă. Revenim în curând!</p>
-    <p class="timer">Timp rămas: <span id="countdown">--:--:--</span></p>
+    <div class="logo">
+      <!-- Dacă ai un logo, înlocuiește src cu calea către el -->
+      <img src="logo.png" alt="Clubul Sportiv Voinard">
+    </div>
+    <h1>🚧 Site în mentenanță 🚧</h1>
+    <p>Pagina Clubului Sportiv Voinard este temporar indisponibilă.</p>
+    <p>Lucrăm pentru a îmbunătăți experiența și vom reveni în curând online.</p>
+    <p>Vă mulțumim pentru înțelegere!</p>
   </div>
-
-  <script>
-    // Setează data lansării (exemplu: peste 7 zile)
-    const launchDate = new Date();
-    launchDate.setDate(launchDate.getDate() + 7);
-
-    const countdown = document.getElementById("countdown");
-
-    function updateTimer() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance <= 0) {
-        countdown.innerHTML = "Site-ul este live!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}z ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateTimer, 1000);
-  </script>
 </body>
 </html>

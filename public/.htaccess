@@ -1,6 +1,6 @@
-RewriteEngine On
-RewriteCond %{REMOTE_ADDR} !^89\.45\.163\.204$
-RewriteRule ^.*$ /maintenance.html [R=302,L]
+#RewriteEngine On
+#RewriteCond %{REMOTE_ADDR} !^89\.45\.163\.204$
+#RewriteRule ^.*$ /maintenance.html [R=302,L]
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
