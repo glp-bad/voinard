@@ -1,4 +1,8 @@
 
+0. sursele sunt in WSL
+	trebuie lansat docker desktop 
+	
+
 1. Construiesc imaginea, dar pe windows numai dupa ce am pornit Docker destktop
 cmd:docker compose build
 
