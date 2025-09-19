@@ -1,0 +1,4 @@
+ deployment:
+  tasks:
+    - export DEPLOYPATH=/home/badminto/glpstage1970.badmintonclub.ro
+    - /bin/cp -R * $DEPLOYPATH
