@@ -1,0 +1,36 @@
+
+1. Construiesc imaginea, dar pe windows numai dupa ce am pornit Docker destktop
+cmd:docker compose build
+
+2. strat docker:
+cmd: docker compose up
+
+
+3. SSL  - self signed certificate
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout certs/voinard.key -out certs/voinard.crt -subj "/C=RO/ST=Bucuresti/L=Bucuresti/O=Voinard/OU=Dev/CN=voinard.local"
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout certs/site_altul.key -out certs/site_altul.crt -subj "/C=RO/ST=Bucuresti/L=Bucuresti/O=SiteAltul/OU=Dev/CN=site_altul.local"
+
+	WSL vede discurile Windows în /mnt/.
+	
+	Start- ubuntu
+
+	C: → /mnt/c/
+	D: → /mnt/d/
+	
+4. hosts
+	127.0.0.1 voinard.local
+	127.0.0.1 site_altul.local	
+	
+	
+	
+5. vizulaizare site-uri
+	docker compose exec web ls -l /etc/apache2/sites-available/	
+	
+	
+6. acces loguri
+	docker compose logs -f web
+	docker compose logs -f mariadb
+	
+	
+7. bash:
+    docker exec -it ubuntu_apache_php83 bash
