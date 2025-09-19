@@ -39,6 +39,13 @@ cmd: docker compose up
 ----------------------------------------------------------------------------------------
 ---- livewire
 	composer require livewire/livewire
+
+	-- clear page
+	php artisan optimize:clear
+
+	create component:
+	php artisan make:livewire xxxx
+
 ---- livewire
 ----------------------------------------------------------------------------------------
 

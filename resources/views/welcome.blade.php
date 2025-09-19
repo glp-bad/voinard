@@ -5,10 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Livewire</title>
+
      </head>   
 
      <body>
-        Hello interent !!!
+        Hello interent 1970!!!
         <livewire:hello-world/>
+
      </body>   
 </html>
