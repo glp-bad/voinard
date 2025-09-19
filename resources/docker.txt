@@ -34,3 +34,11 @@ cmd: docker compose up
 	
 7. bash:
     docker exec -it ubuntu_apache_php83 bash
+
+
+----------------------------------------------------------------------------------------
+---- livewire
+	composer require livewire/livewire
+---- livewire
+----------------------------------------------------------------------------------------
+
