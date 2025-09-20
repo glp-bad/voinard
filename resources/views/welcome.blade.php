@@ -12,5 +12,12 @@
         Hello interent 1970!!!
         <livewire:hello-world/>
 
+        <br><br>
+        <livewire:counter/>
+
+        <br><br>
+
+        <livewire:todos />
+
      </body>   
 </html>

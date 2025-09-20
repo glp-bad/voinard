@@ -39,6 +39,14 @@ cmd: docker compose up
 7. bash:
     docker exec -it ubuntu_apache_php83 bash
 
+8. acces pe WSL2
+	sudo chown -R glp:glp /home/glp/projects/docker_hosting/public_voinard \
+	&& sudo chmod -R u+rwX /home/glp/projects/docker_hosting/public_voinard \
+	&& sudo chown -R www-data:www-data /home/glp/projects/docker_hosting/public_voinard/storage \
+	&& sudo chown -R www-data:www-data /home/glp/projects/docker_hosting/public_voinard/bootstrap/cache \
+	&& sudo chmod -R 775 /home/glp/projects/docker_hosting/public_voinard/storage \
+	&& sudo chmod -R 775 /home/glp/projects/docker_hosting/public_voinard/bootstrap/cache	
+
 
 ----------------------------------------------------------------------------------------
 ---- livewire
@@ -48,7 +56,7 @@ cmd: docker compose up
 	php artisan optimize:clear
 
 	create component:
-	php artisan make:livewire xxxx
+	php artisan make:livewire xxxx && chmod -R 777 app/Livewire && chmod -R 777 resources/views/livewire
 
 ---- livewire
 ----------------------------------------------------------------------------------------
@@ -63,3 +71,8 @@ php artisan view:clear
 php artisan cache:clear
 php artisan livewire:publish --assets
 
+php artisan view:clear \
+&& php artisan cache:clear \
+&& php artisan config:clear
+
+ 
