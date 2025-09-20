@@ -1,9 +1,8 @@
 <div>
     <h1>Todo List</h1>
-    <form wire:submit.prevent="addTodo">
-        <input type="text" wire:model="newTodo" placeholder="Add a new todo">
-        <button type="submit">Add</button>
-    </form>
+    <h2>{{ $carArray['unu'] }}</h2>
+    <input type="text" wire:model="todo" placeholder="Add a new todo">
+    <button wire:click='add'>Add</button>
 
     <ul>
         @foreach($todos as $index => $todo)
