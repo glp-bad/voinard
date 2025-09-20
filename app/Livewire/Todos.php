@@ -23,6 +23,17 @@ class Todos extends Component
         $this->reset('todo');
     }       
 
+
+    public function mount()
+    {
+        $this->todo = 'New Todo';
+    }
+
+    public function updated($property, $value)
+    {
+     
+    }
+
     public function render()
     {
         return view('livewire.todos');
