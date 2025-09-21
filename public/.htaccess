@@ -1,6 +1,11 @@
-#RewriteEngine On
+RewriteEngine On
 #RewriteCond %{REMOTE_ADDR} !^89\.45\.163\.204$
+RewriteCond %{REMOTE_ADDR} !^89\.45\.163\.000$
 #RewriteRule ^.*$ /maintenance.html [R=302,L]
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|css|js|ico)$
+RewriteCond %{REQUEST_URI} !^/announcement.html$
+RewriteCond %{REQUEST_URI} !^/announcement.html\.html$
+RewriteRule ^.*$ /announcement.html [R=302,L,END]
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>

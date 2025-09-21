@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Clubul de Badminton Voinard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Jost:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f4f6f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .header {
+      max-width: 960px;
+      margin: 0 auto 20px auto; /* Center header and add space below */
+    }
+
+    .logo-simple .voinard {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3rem;
+      color: #ff7d01;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .logo-simple .club {
+      font-family: 'Jost', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+	  font-style: italic;
+      color: #06b4d4;
+      letter-spacing: 1px;
+      margin-top: -10px;
+	  margin-left: 13px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: 0 auto; /* Center main container */
+      overflow: hidden; /* Contains the floated elements */
+    }
+
+    .image-container {
+      float: left; /* Make image float to the left */
+      margin-right: 25px; /* Space between image and text */
+      margin-bottom: 15px; /* Space below image */
+      max-width: 200px;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .image-container figcaption {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    .info-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      body {
+        padding: 20px;
+      }
+      .image-container {
+        float: none; /* Disable float on small screens */
+        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px; /* Add more space below when stacked */
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo-simple">
+      <div class="voinard">Voinard</div>
+      <div class="club">badminton club</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <figure class="image-container">
+      <img src="coach_picture.jpg" alt="Antrenor Club Badminton Voinard">
+      <figcaption>Gavrilă Paul <br> (antrenor level 1)</figcaption>
+    </figure>
+    
+    <div class="info-text">
+      Clubul de Badminton Voinard oferă antrenamente pentru toate vârstele și nivelele de experiență. 
+      Membrii clubului participă la competiții locale și naționale, promovând un stil de viață activ 
+      și sănătos. Vă invităm să descoperiți pasiunea pentru badminton alături de noi!
+      
+      <br><br> Clubul de Badminton Voinard oferă antrenamente pentru toate vârstele și nivelele de experiență. 
+      Membrii clubului participă la competiții locale și naționale, promovând un stil de viață activ 
+      și sănătos. Vă invităm să descoperiți pasiunea pentru badminton alături de noi!
+      
+      <br><br>
+      
+      Clubul de Badminton Voinard oferă antrenamente pentru toate vârstele și nivelele de experiență. 
+      Membrii clubului participă la competiții locale și naționale, promovând un stil de viață activ 
+      și sănătos. Vă invităm să descoperiți pasiunea pentru badminton alături de noi!
+    </div>
+  </div>
+
+</body>
+</html>
