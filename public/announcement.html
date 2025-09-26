@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Clubul de Badminton Voinard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Jost:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Jost:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
       background: #f4f6f9;
@@ -48,7 +48,15 @@
     }
 
     .image-container {
-      float: left; /* Make image float to the left */
+      /* **REMOVED: float: left;** */
+      /* By removing the float, the figure will behave like a block element. */
+      /* To keep the image and caption next to the text on larger screens, */
+      /* we need to adjust the structure or use Flexbox/Grid, but the goal */
+      /* seems to be to have them on their own line now. */
+      
+      /* Re-applying the original float: left to keep the text next to it, */
+      /* but then clearing the float for the text block below. */
+      float: left; /* Keep the original float behavior */
       margin-right: 25px; /* Space between image and text */
       margin-bottom: 15px; /* Space below image */
       max-width: 200px;
@@ -74,8 +82,42 @@
       font-size: 1rem;
       color: #333;
       line-height: 1.6;
+      font-weight: 400;
+      /* --- ADDED: Clears the float from the .image-container --- */
+      clear: both; 
+      /* You need to remove the content that appears right next to the image */
+      /* and put it BELOW the image/caption and its adjacent text. */
+      /* Let's try an alternative to keep the first few lines of text next to the image/caption, */
+      /* and only the rest of the text below. This requires restructuring the HTML. */
+    }
+    
+    .intro-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+      font-weight: 400;
+      /* This will be the text that flows next to the image */
+    }
+    
+    .main-text {
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+      font-weight: 400;
+      /* --- ADDED: Clears the float --- */
+      clear: both; 
     }
 
+    .intro-text bold{
+      font-weight: 700;
+    }
+
+    .main-text bold{
+      font-weight: 700;
+    }
+    
     /* Responsive adjustments */
     @media (max-width: 700px) {
       body {
@@ -88,6 +130,10 @@
         margin-right: auto;
         margin-bottom: 20px; /* Add more space below when stacked */
         max-width: 150px;
+      }
+      /* Ensure the text is properly aligned on small screens too */
+      .intro-text, .main-text {
+        clear: none; /* No need to clear the float here */
       }
     }
   </style>
@@ -107,55 +153,98 @@
       <figcaption>Gavrilă Paul <br> (antrenor level 1)</figcaption>
     </figure>
     
-    <div class="info-text">
-      Salut,<br>
-      Te invit să descoperi jocul de badminton. Incepem antrenamentele din 5 octombrie 2025 ora 17.
-      Sesiunile de antrenament voar avea doua ore și vor tine in fiecare Duminică incepand cu ora 17 la 
-      sala de sport a scolii din comuna Frumusani/Ilfov (strada Principala nr 123).<br><br>
-      Costul este de 30 de lei de persoana pe sesiune, plata se face la fiecare sesiune.
-      Asiguram mingi de joc doar pentru antrenamente. Pentru meciurile de badminton, trebui sa aveti propriile mingi.}
-      Echipamentul de joc obligatoriu este incaltamintea sportiva cu talpa (non-marking). 
-      Pantofi de sport pentru jocurile de sala (handbal, volei, badminton), cu un numar mai mare decat purtati in mod normal.
-      Nu trebuie sa alunece pe suprafata de joc si nu trebuie sa lase urme pe parchet.
-      Racheta de badminton nu este obligatorie pentru antrenamente, dar este recomandata. ;)
+    <div class="intro-text">
+      Salut,<br> 
+      Te invit să descoperi jocul de badminton. <br> 
+      Din 12 octombrie 2025, ora 17.00, începem antrenamentele în sala de sport a școlii din <br><bold>comuna Frumușani, jud. Călărași (DN4, Frumușani 917100)</bold>  
+      <a href="https://maps.app.goo.gl/P2o2bvtWqbdfkG7p8" target="_blank" rel="noopener">goole maps -></a> 
       <br><br>
-      Pentru inscriere si informatii suplimentare ma puteti contacta la numarul de telefon 0723 456 789
-      sau prin email la adresa voinard.badminton@gmail.com.<br><br>
+      <bold>Organizăm 2 (două) sesiuni de antrenament</bold>, patru zile pe luna (în fiecare Duminica). <br> 
+      <bold>Prima sesiune</bold> are loc în intervalul orar 17.00 -18.00 și este destinata copiilor cu vârsta cuprinsa intre 6 și 13 ani.<br>  
+      <bold>A doua sesiune</bold> are loc în intervalul orar 18.00 - 19.00 și este destinată oricui dorește sa învețe badminton și nu mai este copil 😊. 
+    </div>
+    
+<div class="main-text">
+     
 
-      Ai retinut bine, vor fi sesiuni de antrenament. Si daca ne mai ramane timp si energie jucam si badminton ;).
-      Puteti veni in familie, singuri, sa aduceti doar copiii sau doar pe voi insiva.
-      Important este sa doriti sa va miscati, sa va distrati si sa invatati un sport nou.
-      Vom incerca sa gasim exercitile potrivite pentru fiecare varsta si nivel de pregatire.
-      Dar sa nu uitam ca vorbim de "level 1".;)<br>
-      
-      Cursul de antrenor a fost organizat de Federatia Romana de Badminton. <br>
-      <a href="https://badminton.ro/2024/06/federatia-romana-de-badminton-organizeaza-curs-de-antrenori-bec-bwf-level-1-bacau-21-28-iulie-2024-sala-orizont/" target="_blank" rel="noopener">
-        Curs antrenori badminton level 1 </a>
+<bold>Prețul sesiunilor</bold> de antrenament variază, iar plata (numai cu cardul) se face la fiecare sesiune de antrenament. 
+<ul>
+    <li>
+        Pentru copii:
+        <ul>
+            <li>30 de lei pentru un copil</li>
+            <li>50 de lei pentru doi frați dintr-o familie (sau mai mult de doi frați)</li>
+        </ul>
+    </li>
+    <li>
+        Pentru adulți:
+        <ul>
+            <li>30 de lei pentru un adult</li>
+            <li>50 de lei pentru un cuplu (soț și soție)</li>
+            <li>60 de lei pentru soț și soție și copilul cu vârsta de peste 14 ani</li>
+        </ul>
+    </li>
+</ul>
+ 
+<bold>Ai reținut bine, vor fi sesiuni de antrenament.</bold> Și daca ne mai rămâne timp și energie jucăm și badminton ;). <br>
+Asigurăm mingi de joc (fluturași) doar pentru antrenamente. Pentru meciurile de badminton (joc de agrement), atunci cand se joaca, jucătorii vor folosi propriile mingi, preferabil din pană. <br>
+
+<bold>Echipamentul</bold> minim obligatoriu se rezuma doar la încălțăminte. 
+Se recomandă utilizarea pantofilor de sport pentru jocurile de sală (handbal, volei, badminton etc). Ca marime trebuie sa fie cu cel puțin un număr mai mare decât purtați în mod normal. 
+Pantofii nu trebuie sa alunece pe suprafața de joc și nu trebuie sa lase urme pe parchet (talpa non-marking). Nu puteți intra în sala (pe terenul de joc) cu pantofii în care ați venit la sala. <br>
+Racheta de badminton nu este obligatorie pentru antrenamente, dar este recomandată. ;) 
+
+      <br><br> 
+
+      <bold>Pentru înscriere</bold> și informații suplimentare mă puteți contacta la numărul de telefon 0723.456.789, pe WhatsApp sau prin email la adresa voinard@badmintonclub.ro. 
+<bold>Este este de preferat comunicarea pe WhatsApp</bold>, la telefon nu voi putea răspunde întotdeauna în momentul în care sunați.
+<br><br> 
+
+      Puteți veni în familie, singuri, să aduceți doar copiii sau doar pe voi înșivă. 
+      Important este sa doriți să vă mișcați, să vă distrați și să aveți disponibilitatea de a învăța un sport nou. 
+      Vom încerca sa găsim exercițiile potrivite pentru fiecare vârsta și nivel de pregătire. 
+      <br><br>  
+       
+
+      Cursul de antrenor de badminton level 1 a fost organizat de <bold>Federația Romana de Badminton</bold> în colaborare cu <bold>Federatia Europeana de Badminton.</bold>
+      <a href="https://badminton.ro/2024/06/federatia-romana-de-badminton-organizeaza-curs-de-antrenori-bec-bwf-level-1-bacau-21-28-iulie-2024-sala-orizont/" target="_blank" rel="noopener"> 
+        Curs antrenori-> </a> 
       <br><br>
-      Dar ce este si ce inseamna "antrenor level 1"?<br>
-      Cea mai buna anaologie este sa ne gandim ca la un invatator de scoala primara. 
-      învățăm bazele. Cum să ne mișcăm în teren, cum să ținem racheta în mână, cum să lovim corect și să ne coordonăm mișcările. 
-      O baza solida, corect insusita, este esentiala pentru progesul de mai tarziu si pentru evitarea accidentarilor.<br><br>
-      Pentru cei care doresc putem merge si mai departe. Dar sa nu uitam ca badmintonul este un sport extrem de competitiv
-      Usor de practicat ca amator, dar greu de stapanit la nivel inalt.<br><br>
 
-      Daca ai ajuns pana aici, inseamna ca esti interesat de badminton.
-      Este recomandat sa joci in diverse locatii si cu cat mai multi adversari, sa participi la concursuri.
-      Variatia este unul din cuvintele cheie in badminton.<br><br>
+      <bold> Dar ce este și ce înseamnă "antrenor level 1"? </bold><br> 
+      Cea mai buna analogie este sa ne gândim ca la un învățător de scoală primara. 
+      Învățăm noțiunile de bază: cum să ne mișcăm în teren, cum să ținem racheta în mână, cum să lovim corect și să ne coordonăm mișcările. Tehnica este foarte importanta în badminton. 
+      O baza solidă, corect însușita, este esențială pentru progresul de mai târziu și pentru evitarea accidentarilor.<br><br> 
+      Pentru cei care doresc putem merge și mai departe. Dar să nu uitam ca badmintonul este un sport extrem de competitiv. 
+      Ușor de practicat ca amator, dar greu de stăpânit la nivel înalt.<br><br> 
 
-      In cazul in care locatia propusa de mine nu este potrivita pentru tine, sau orarul nu se potriveste cu programul tau, mai ai la dispozite si alte locatii
-      unde poti juca badminton (fara avea pretentia de le enumera pe toate):
-      SunPlaza
-      Decorio
-      Romexpo.
+      Daca ai ajuns pana aici, înseamnă ca ești interesat de badminton. 
+      Este recomandat sa joci în cat mai multe locații și cu cat mai mulți adversari, să participi la concursuri. 
+      <bold>Variația este unul din cuvintele cheie în badminton.</bold><br><br> 
 
+ 
 
-      Te astept cu drag la antrenamente.<br><br>
-      Paul Gavrila<br>
-      Antrenor Club Badminton Voinard 
+    În cazul în care locația propusa de mine nu este potrivita pentru tine sau orarul nu se potrivește cu programul tău, mai ai la dispoziție și alte locații unde poți juca badminton (fără avea pretenția de le enumera pe toate): 
 
+    <ul>
+        <li>
+            <a href="https://badmintonarmada.ro/">Club Armada Sud</a>
+            Organizeaza sesiuni de antrenament in Bucuresti la SunPlaza.
+        </li>
+        <li>
+            <a href="https://www.decoriobadminton.ro/">Decorio Badminton Club</a>
+            Locatia: Soseaua Unirii, Nr. 146, Caciulati, Romania
+          </li>
+        <li>
+            <a href="https://www.aerosquash.ro/">AeroSquash</a>
+            Pe langa squash se poate juca si badmionton. Bucuresti, Romexpo.
+        </li>
+    </ul>
 
+      Vă așteptăm la antrenamente.<br><br> 
 
+      Paul Gavrila, <br> 
+      Club Badminton Voinard (2025-09-26)
       
     </div>
   </div>
